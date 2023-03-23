@@ -29,6 +29,9 @@ class MyHomePage extends StatelessWidget {
   TextEditingController lastNameController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController phoneNumberController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  TextEditingController confirmpasswordController = TextEditingController();
+
   TextEditingController instituteNameController = TextEditingController();
 
   @override
@@ -48,25 +51,77 @@ class MyHomePage extends StatelessWidget {
             controller: firstNameController,
             decoration: InputDecoration(
                 hintText: "First Name", labelText: "First Name"),
+            validator: (value) {
+              if (value!.isEmpty) {
+                return 'Please enter product name';
+              }
+              return null;
+            },
           ),
           TextFormField(
             controller: lastNameController,
             decoration:
                 InputDecoration(hintText: "Last Name", labelText: "Last Name"),
+            validator: (value) {
+              if (value!.isEmpty) {
+                return 'Please enter product name';
+              }
+              return null;
+            },
           ),
           TextFormField(
             controller: emailController,
             decoration: InputDecoration(hintText: "Email", labelText: "Email"),
+            validator: (value) {
+              if (value!.isEmpty) {
+                return 'Please enter product name';
+              }
+              return null;
+            },
+          ),
+          TextFormField(
+            controller: passwordController,
+            decoration:
+                InputDecoration(hintText: "Password", labelText: "Password"),
+            validator: (value) {
+              if (value!.isEmpty) {
+                return 'Please enter product name';
+              }
+              return null;
+            },
+          ),
+          TextFormField(
+            controller: confirmpasswordController,
+            decoration: InputDecoration(
+                hintText: "Confirm Password", labelText: "Confirm Password"),
+            validator: (value) {
+              if (value!.isEmpty) {
+                return 'Please enter product name';
+              }
+              return null;
+            },
           ),
           TextFormField(
             controller: phoneNumberController,
             decoration: InputDecoration(
                 hintText: "Phone Number", labelText: "Phone Number"),
+            validator: (value) {
+              if (value!.isEmpty) {
+                return 'Please enter product name';
+              }
+              return null;
+            },
           ),
           TextFormField(
             controller: instituteNameController,
             decoration: InputDecoration(
                 hintText: "Institute Name", labelText: "Institute Name"),
+            validator: (value) {
+              if (value!.isEmpty) {
+                return 'Please enter product name';
+              }
+              return null;
+            },
           ),
           SizedBox(
             height: 30,
